@@ -1,0 +1,63 @@
+.container {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 10% 35% 30% 25%;
+    grid-template-areas: 
+    "nav nav nav nav"
+    "Sidebar main main main"
+    "Sidebar Content1 Content2 Content3"
+    "footer footer footer footer";
+    grid-gap: 5px;
+}
+
+nav {
+    background-color: aqua;
+    grid-area: nav;
+}
+
+main {
+    background-color: grey;
+    grid-area: main;
+}
+
+#Sidebar {
+    background-color: royalblue;
+    grid-area: Sidebar;
+}
+
+#Content1 {
+    background-color: palegreen;
+    grid-area: Content1;
+}
+
+#Content2 {
+    background-color: aquamarine;
+    grid-area: Content2;
+}
+
+#Content3 {
+    background-color: blueviolet;
+    grid-area: Content3;
+}
+
+footer {
+    background-color: brown;
+    grid-area: footer;
+}
+
+@media only screen and (max-width: 500px) {
+    .container{
+    grid-template-columns: 100%;
+    grid-template-rows: 10% 15% 20% 15% 15% 15% 10%;
+    grid-template-areas: 
+    "nav"
+    "Sidebar"
+    "main"
+    "Content1"
+    "Content2"
+    "Content3"
+    "footer"
+    ;
+    }
+}
